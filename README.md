@@ -1,11 +1,18 @@
-<!-- Profile Header with Typing Animation -->
+<!-- Profile Header with Stylish Typing Animation -->
 <h1 align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?size=32&center=true&vCenter=true&width=750&lines=Hi+👋,+I'm+Debarun+Das;Full-Stack+Developer;AI+%26+Cloud+Tech+Enthusiast;IoT+%26+Robotics+Innovator;Open-Source+Contributor" alt="Typing Animation">
+  <img src="https://readme-typing-svg.herokuapp.com?size=36&duration=4000&color=58A6FF&center=true&vCenter=true&width=900&lines=Hi+👋,+I'm+Debarun+Das;💻+Full-Stack+Developer;🤖+AI+%26+Cloud+Tech+Enthusiast;🌱+IoT+%26+Robotics+Innovator;🚀+Open-Source+Contributor" alt="Typing Animation">
 </h1>
 
-<!-- Developer Banner -->
+<!-- Gradient Name for Style -->
+<h2 align="center">
+  <span style="background: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%); -webkit-background-clip: text; color: transparent; font-weight: bold; font-size: 28px;">
+    Crafting Code, Creating Impact ✨
+  </span>
+</h2>
+
+<!-- Developer Banner with Shadow -->
 <p align="center">
-  <img src="https://i.ibb.co/kM8sF9n/code-banner.gif" alt="Developer Banner" width="85%">
+  <img src="https://i.ibb.co/kM8sF9n/code-banner.gif" alt="Developer Banner" width="85%" style="border-radius: 12px; box-shadow: 0px 0px 15px rgba(88, 166, 255, 0.6);">
 </p>
 
 ---
@@ -20,7 +27,6 @@
 ---
 
 ## 🛠 Tech Stack
-
 <p align="center">
   <img src="https://skillicons.dev/icons?i=java,js,react,nextjs,html,css,bootstrap,git,github,docker,mysql,postgres,linux,opencv" />
 </p>
@@ -55,10 +61,19 @@
 - Automated question generation & CI/CD deployment on IBM Cloud  
 </details>
 
+<details>
+<summary>💬 Google Gemini Clone App (React.js)</summary>
+
+**🔗 [View Project](https://github.com/debarun23/gemini-clone-project)**  
+- **Google Gemini Clone** built with **React.js**  
+- Integrated **Google Gemini API** for AI-driven conversational features  
+- Clean, responsive UI inspired by Google’s design language  
+- Modular component architecture for scalability and maintainability  
+</details>
+
 ---
 
 ## 📜 Certifications  
-
 <p align="center">
   <a href="https://www.coursera.org/account/accomplishments/verify/EYAB67XVUS38"><img src="https://img.shields.io/badge/Meta-Front_End_Developer-blue?style=for-the-badge&logo=meta&logoColor=white"></a>
   <a href="https://www.coursera.org/account/accomplishments/verify/PW3ALENRW75C"><img src="https://img.shields.io/badge/Meta-Version_Control-blue?style=for-the-badge&logo=meta&logoColor=white"></a>
@@ -71,7 +86,6 @@
 ---
 
 ## 📊 GitHub Stats  
-
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=debarun23&show_icons=true&theme=tokyonight" height="150">
   <img src="https://github-readme-streak-stats.herokuapp.com?user=debarun23&theme=tokyonight" height="150">
@@ -84,7 +98,6 @@
 ---
 
 ## 📬 Connect with Me  
-
 <p align="center">
   <a href="mailto:debarundas237@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"></a>
   <a href="https://linkedin.com/in/debarun-das"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>
