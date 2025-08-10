@@ -106,6 +106,14 @@
 
 ---
 
+<!-- Steve Jobs Quote -->
+<p align="center" style="font-style: italic; font-size: 18px; color: #999;">
+  “Innovation distinguishes between a leader and a follower.”  
+  <br>— Steve Jobs
+</p>
+
+---
+
 <p align="center">
   <em>"Turning coffee ☕ into code and ideas 💡 into reality."</em>
 </p>
