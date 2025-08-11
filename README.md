@@ -1,6 +1,6 @@
 <!-- Profile Header with Stylish Typing Animation -->
 <h1 align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?size=36&duration=4000&color=58A6FF&center=true&vCenter=true&width=900&lines=Hi+👋,+I'm+Debarun+Das;💻+Full-Stack+Developer;🤖+AI+%26+Cloud+Tech+Enthusiast;🌱+IoT+%26+Robotics+Innovator;🚀+Open-Source+Contributor" alt="Typing Animation">
+  <img src="https://readme-typing-svg.herokuapp.com?size=36&duration=4000&color=58A6FF&center=true&vCenter=true&width=900&lines=Hi+👋,+I'm+Debarun;💻+Full-Stack+Developer;🤖+AI+%26+Cloud+Tech+Enthusiast;🌱+IoT+%26+Robotics+Innovator;🚀+Open-Source+Contributor" alt="Typing Animation">
 </h1>
 
 <!-- Gradient Name for Style -->
