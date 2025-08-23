@@ -93,6 +93,13 @@ Experienced in designing scalable software architectures and building smooth use
   <img src="https://github-readme-streak-stats.herokuapp.com?user=debarun23&theme=gruvbox" alt="GitHub Streak" height="140" />
 </p>
 
+<!-- 🆕 Contribution Graph -->
+## Contribution Graph
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=debarun23&theme=gruvbox&area=true&hide_border=true&radius=8" alt="Debarun's Contribution Graph" width="95%" />
+</p>
+
 ---
 
 ## Connect with Me
