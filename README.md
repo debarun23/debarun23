@@ -107,7 +107,8 @@ Experienced in designing scalable software architectures and building smooth use
 <p align="center">
   <a href="mailto:debarundas237@gmail.com" style="text-decoration:none; color:#2E86C1;">Email</a> •  
   <a href="https://linkedin.com/in/debarun-das" style="text-decoration:none; color:#2E86C1;">LinkedIn</a> •  
-  <a href="https://github.com/debarun23" style="text-decoration:none; color:#2E86C1;">GitHub</a>
+  <a href="https://github.com/debarun23" style="text-decoration:none; color:#2E86C1;">GitHub</a> •  
+  <a href="https://debarun-s-portfolio.vercel.app/" style="text-decoration:none; color:#2E86C1;">Portfolio</a>
 </p>
 
 ---
