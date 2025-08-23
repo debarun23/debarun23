@@ -86,11 +86,15 @@ Experienced in designing scalable software architectures and building smooth use
 
 ---
 
-## GitHub Statistics
+## GitHub & LinkedIn Statistics
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=debarun23&show_icons=true&theme=gruvbox" alt="GitHub Stats" height="140" />
   <img src="https://github-readme-streak-stats.herokuapp.com?user=debarun23&theme=gruvbox" alt="GitHub Streak" height="140" />
+</p>
+
+<p align="center">
+  <img src="https://maz-official.sgp1.cdn.digitaloceanspaces.com/streamlabs/linkedinhub/chart.png" width="700" alt="LinkedIn Activity Graph" />
 </p>
 
 ---
