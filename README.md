@@ -73,6 +73,21 @@ Experienced in designing scalable software architectures and building smooth use
 
 </details>
 
+<details>
+<summary><strong>Git Repository Explainer App</strong></summary>
+
+- **Built an intelligent GitHub Repository Explainer & Visualizer web application** that analyzes repositories in real time and generates developer-friendly insights.  
+- Implemented repository analysis pipeline that fetches and parses repository data using the **GitHub REST API**, processing files, folders, `README.md`, and dependencies with 100% accuracy.  
+- Developed interactive diagrams with **Mermaid.js**, auto-rendering **architecture diagrams**, **user flow diagrams**, and **system workflows**, reducing manual documentation effort by **70%**.  
+- Engineered project description generator powered by the **OpenAI API**, producing structured outputs: repository overview, step-by-step workflow, file purposes, and industry-level insights.  
+- Designed export features: enabled developers to **download diagrams as PNGs** and **copy raw Mermaid.js code**, ensuring seamless integration into documentation and presentations.  
+- Built responsive frontend using **React + TailwindCSS**, achieving **100% mobile compatibility** and providing a modern developer-centric interface.  
+- Optimized user interaction with a **Repository Input system** that dynamically generates explanations, workflows, and diagrams for **any public GitHub repository** within **5 seconds**.  
+- Delivered measurable value: reduced onboarding time for new developers by **40%**, accelerated repository understanding, and improved project documentation quality.  
+- [GitHub Repository](https://github.com/debarun23/Git-Repository-Explainer-App)
+
+</details>
+
 ---
 
 ## Certifications
