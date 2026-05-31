@@ -23,7 +23,7 @@ class DebarunDas:
 
 ---
 
-## 🧠 Flagship Project — ENG_llmV03
+## Flagship Project — ENG_llmV03
 
 > 95M Parameter Language Model · Built Entirely From Scratch · No `from_pretrained()`
 
@@ -36,7 +36,7 @@ Fine-tuned PPL:  20.83  (two-stage LoRA: R128 → R64)
 LoRA Params   :  ~1.6M trainable (1.8% of base)
 QA Dataset    :  355k clean pairs (SciQ + ELI5 + FreebaseQA)
 Hardware      :  Single RTX 5050 (8.5GB VRAM)
-Status        :  ✅ Complete
+Status        :  Complete
 ```
 
 **What makes this different from every other "LLM from scratch" tutorial:**
