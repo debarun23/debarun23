@@ -1,175 +1,228 @@
-<!-- Typing SVG header -->
-<div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=700&size=28&duration=3500&pause=1000&color=00D4FF&center=true&vCenter=true&width=700&lines=Debarun+Das;AI+%2F+ML+Engineer;LLM+Architect;Building+Intelligence+from+Scratch" alt="Typing SVG" />
-  
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=120&section=header&animation=twinkling" />
-</div>
+# Debarun Das
+
+### LLM Engineer | AI Developer | Building Intelligence from First Principles
+
+[![Portfolio](https://img.shields.io/badge/Portfolio-debarun--s--portfolio.vercel.app-000000?style=flat-square\&logo=vercel\&logoColor=white)](https://debarun-s-portfolio.vercel.app/)
+[![GitHub](https://img.shields.io/badge/GitHub-debarun23-181717?style=flat-square\&logo=github\&logoColor=white)](https://github.com/debarun23)
+[![Hugging Face](https://img.shields.io/badge/HuggingFace-Debarun12-FFD21E?style=flat-square\&logo=huggingface\&logoColor=black)](https://huggingface.co/Debarun12)
 
 ---
 
-## `whoami`
+## About
 
-```python
-class DebarunDas:
-    role        = "AI / ML Engineer"
-    focus       = ["LLM Architecture", "LoRA Fine-Tuning", "RAG Systems", "MLOps"]
-    current     = "AI Engineer @ Mind & Matter UK"
-    flagship    = "Built 95M-param LLM from scratch — beats GPT-3 Small (PPL 24.40 vs 26.0)"
-    philosophy  = "Understand the internals. Build from scratch. Deploy with purpose."
-```
+I build LLMs—not just use them.
 
-> I don't just *use* AI — I architect, train, and deploy it.
-> Built a **95M parameter transformer** from first principles using LLaMA-style architecture (RoPE + SwiGLU), outperforming GPT-3 Small on WikiText-103 with **30% fewer parameters**.
+My work focuses on training, fine-tuning, evaluating, and deploying language models under real-world hardware constraints. I enjoy working across the entire stack: dataset engineering, transformer architectures, low-resource training, retrieval systems, and production deployment.
+
+Every project includes documented engineering decisions, debugging notes, evaluation results, and known limitations.
+
+**Current Focus:** LLM Fine-Tuning · RAG Systems · Agentic AI · Low-Resource ML
 
 ---
 
-## Flagship Project — ENG_llmV03
+# Core Projects
 
-> 95M Parameter Language Model · Built Entirely From Scratch · No `from_pretrained()`
+## ENG_llmV03 — 95M Parameter LLM Built From Scratch
 
-```
-Architecture  :  RoPE + SwiGLU Transformer (LLaMA / Mistral style)
-Parameters    :  95M
-Training Data :  WikiText-103 (103M tokens)
-Base PPL      :  24.40  ← beats GPT-3 Small (26.0) with 30% fewer params
-Fine-tuned PPL:  20.83  (two-stage LoRA: R128 → R64)
-LoRA Params   :  ~1.6M trainable (1.8% of base)
-QA Dataset    :  355k clean pairs (SciQ + ELI5 + FreebaseQA)
-Hardware      :  Single RTX 5050 (8.5GB VRAM)
-Status        :  Complete
-```
+> No `from_pretrained()`. Built from mathematical foundations.
 
-**What makes this different from every other "LLM from scratch" tutorial:**
+| Metric          | Value                      |
+| --------------- | -------------------------- |
+| Architecture    | RoPE + SwiGLU Transformer  |
+| Parameters      | 95M                        |
+| Training Data   | WikiText-103 (103M tokens) |
+| Base PPL        | 24.40                      |
+| Fine-Tuned PPL  | 20.83                      |
+| LoRA Parameters | ~1.6M                      |
+| QA Dataset      | 355K Clean QA Pairs        |
+| Hardware        | RTX 5050 (8.5GB VRAM)      |
 
-- Diagnosed and fixed **validation contamination** mid-training (V2 → V3 full rebuild)
-- Implemented **RoPE and SwiGLU from mathematical foundations** — not copy-paste
-- Hit and fixed **catastrophic forgetting** — switched full fine-tune → two-stage LoRA
-- Engineered **355k clean QA pairs** from 405k raw (regex filtering, deduplication, length enforcement)
-- Every epoch tracked, every bug documented, every architectural decision justified
+### Highlights
 
-**V2 → V3 Architecture Upgrade:**
+* Implemented Transformer architecture from scratch
+* Implemented RoPE positional encoding
+* Implemented SwiGLU feed-forward blocks
+* Diagnosed and fixed validation contamination
+* Rebuilt model pipeline from V2 → V3
+* Solved catastrophic forgetting using staged LoRA fine-tuning
+* Created and cleaned 355K QA examples from 405K raw samples
 
-| | V2 | V3 |
-|---|---|---|
-| Position Encoding | Absolute | **RoPE** |
-| FFN Activation | GELU | **SwiGLU** |
-| Layers | 8 | **12** |
-| Parameters | 77M | **95M** |
-| Final PPL | ~28 | **20.83** |
+### Architecture Evolution
 
-📄 [Full technical documentation](https://github.com/debarun23/LLM-from-scratch) · 🤗 [Model on HuggingFace](https://huggingface.co/Debarun12)
+| Feature           | V2       | V3     |
+| ----------------- | -------- | ------ |
+| Position Encoding | Absolute | RoPE   |
+| Activation        | GELU     | SwiGLU |
+| Layers            | 8        | 12     |
+| Parameters        | 77M      | 95M    |
+| Final PPL         | ~28      | 20.83  |
+
+**Links**
+
+* GitHub: https://github.com/debarun23/LLM-from-scratch
+* Hugging Face: https://huggingface.co/Debarun12
 
 ---
 
-## 📌 Featured Projects
+## JavaExpert-Qwen2.5-3B — Domain-Locked Java QA via QLoRA
 
-**🌱 Terratech — AI Agricultural Monitoring System**
+> Fine-tuned Qwen2.5-3B on a single 8GB GPU.
 
-IoT-enabled crop health monitoring with ESP32-CAM and multi-sensor integration.
+| Metric                | Value               |
+| --------------------- | ------------------- |
+| Base Model            | Qwen2.5-3B-Instruct |
+| Method                | QLoRA               |
+| Dataset               | 7,921 QA Pairs      |
+| Validation Perplexity | 2.40                |
+| Peak Training VRAM    | < 7 GB              |
+| Inference VRAM        | < 2 GB              |
+| Java Correctness      | 8.5 / 10            |
+| Domain Restriction    | 8.5 / 10            |
+| Hardware              | RTX 5050 (8GB VRAM) |
 
-- **95% accuracy** in plant disease detection using Edge Impulse and OpenCV
-- Automated irrigation system reducing water consumption by **28.6%**
-- End-to-end pipeline: sensor data → edge AI inference → automated actuation
+### Engineering Decisions
+
+| Component              | Initial             | Final                | VRAM Saved |
+| ---------------------- | ------------------- | -------------------- | ---------- |
+| LoRA Rank              | 32 across 7 modules | 16 on q_proj, v_proj | −1.5 GB    |
+| Batch Size             | 4                   | 1 + Grad Accum ×8    | −2.0 GB    |
+| Optimizer              | AdamW               | Adafactor            | −1.0 GB    |
+| Gradient Checkpointing | Enabled             | Disabled             | −1.0 GB    |
+
+### Bugs Found and Fixed
+
+* SFTTrainer + packing caused 24× step inflation
+* PyTorch 2.6 checkpoint incompatibility due to `weights_only=True`
+* Fixed checkpoint resumption pipeline
+
+**Links**
+
+* GitHub: https://github.com/debarun23/java-expert-qlora
+* Model: https://huggingface.co/Debarun12/JavaExpert-Qwen2.5-3B
+
+---
+
+## Terratech — AI Agricultural Monitoring System
+
+AI-powered crop monitoring and automated irrigation platform.
+
+### Results
+
+* 95% disease detection accuracy
+* 28.6% reduction in water consumption
+* Real-time sensor monitoring and actuation
+
+### Technologies
 
 `ESP32` `OpenCV` `Edge Impulse` `IoT` `Computer Vision`
 
-[GitHub →](https://github.com/debarun23/Terratech-Smart-Agriculture-with-IoT-Robotics-AI)
+**GitHub**
+
+https://github.com/debarun23/Terratech-Smart-Agriculture-with-IoT-Robotics-AI
 
 ---
 
-**🪨 Job Granite Guide — Agentic AI Interview Trainer**
+## Job Granite Guide — Agentic AI Interview Trainer
 
-Agentic AI assistant for interview preparation powered by IBM Granite and RAG.
+Interview preparation assistant built using IBM Granite and Retrieval-Augmented Generation.
 
-- Automated domain-specific question generation with retrieval-augmented context
-- CI/CD deployment pipeline on IBM Cloud
+### Features
 
-`IBM Granite` `RAG` `LangChain` `Agentic AI` `IBM Cloud`
+* Domain-specific interview preparation
+* RAG-powered contextual responses
+* CI/CD deployment on IBM Cloud
 
-[GitHub →](https://github.com/debarun23/job-granite-guide)
+### Technologies
+
+`IBM Granite` `RAG` `LangChain` `Agentic AI`
+
+**GitHub**
+
+https://github.com/debarun23/job-granite-guide
 
 ---
 
-**📊 Git Repository Explainer — Intelligent Code Analyzer**
+## Git Repository Explainer
 
-Analyzes any public GitHub repository in real time and generates developer-friendly insights.
+Analyzes public GitHub repositories and automatically generates architecture explanations.
 
-- GitHub REST API pipeline with **100% parsing accuracy**
-- Auto-generates Mermaid.js architecture and flow diagrams
-- Reduced developer onboarding time by **40%**
+### Results
+
+* 100% repository parsing success
+* Automated Mermaid.js architecture diagrams
+* Reduced developer onboarding effort
+
+### Technologies
 
 `React` `TailwindCSS` `OpenAI API` `GitHub API` `Mermaid.js`
 
-[GitHub →](https://github.com/debarun23/Git-Repository-Explainer-App)
+**GitHub**
+
+https://github.com/debarun23/Git-Repository-Explainer-App
 
 ---
 
-**📈 Crypto Price Tracker Dashboard**
+# Technical Stack
 
-Real-time tracking for 50+ cryptocurrencies with interactive charts.
+## AI / ML
 
-- CoinGecko API integration with React Hooks and Google Charts
-- **40% faster** load times post-Vite migration
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square\&logo=pytorch\&logoColor=white)
+![HuggingFace](https://img.shields.io/badge/HuggingFace-FFD21E?style=flat-square\&logo=huggingface\&logoColor=black)
+![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square\&logo=langchain\&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square\&logo=numpy\&logoColor=white)
+![CUDA](https://img.shields.io/badge/CUDA-76B900?style=flat-square\&logo=nvidia\&logoColor=white)
 
-`React` `Google Charts` `CoinGecko API` `Vite`
+### Implemented From Scratch
 
-[GitHub →](https://github.com/debarun23/Crypto-Price-Tracking-App)
-
----
-
-## ⚙️ Technical Stack
-
-### AI / ML
-[![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)](https://pytorch.org)
-[![HuggingFace](https://img.shields.io/badge/HuggingFace-FFD21E?style=flat-square&logo=huggingface&logoColor=black)](https://huggingface.co)
-[![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white)](https://langchain.com)
-[![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)](https://numpy.org)
-[![CUDA](https://img.shields.io/badge/CUDA-76B900?style=flat-square&logo=nvidia&logoColor=white)](https://developer.nvidia.com/cuda-zone)
-
-**Implemented from scratch:** `Transformer` · `Multi-Head Attention` · `RoPE` · `SwiGLU` · `LoRA` · `Flash Attention` · `Cosine LR Scheduling` · `Gradient Accumulation`
-
-### Infrastructure & Tools
-[![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)](https://docker.com)
-[![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)](https://git-scm.com)
-[![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)](https://linux.org)
-[![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org)
+* Transformer
+* Multi-Head Attention
+* RoPE
+* SwiGLU
+* LoRA
+* Flash Attention
+* Gradient Accumulation
+* Cosine Learning Rate Scheduling
 
 ---
 
-## 📊 GitHub Stats
+# Infrastructure
+
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square\&logo=docker\&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat-square\&logo=git\&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square\&logo=linux\&logoColor=black)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square\&logo=python\&logoColor=white)
+
+---
+
+# Certifications
+
+* DeepLearning.AI — LangChain for LLM Application Development
+* DeepLearning.AI — Finetuning Large Language Models
+* Hugging Face — NLP Course
+* Meta — Version Control
+* IBM — Getting Started with AI
+* Deloitte — Technology Job Simulation
+
+---
+
+# GitHub Stats
 
 <div align="center">
 
-![Debarun's GitHub Stats](https://github-readme-stats.vercel.app/api?username=debarun23&show_icons=true&theme=transparent&hide_border=true&title_color=00D4FF&icon_color=00D4FF&text_color=ffffff&bg_color=0d1117)
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=debarun23&theme=transparent&hide_border=true&ring=00D4FF&fire=00D4FF&currStreakLabel=00D4FF)
+<img height="170" src="https://github-readme-stats.vercel.app/api?username=debarun23&show_icons=true&theme=transparent&hide_border=true"/>
 
-![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=debarun23&theme=react-dark&hide_border=true&color=00D4FF&line=00D4FF&point=ffffff&area=true)
+<img height="170" src="https://github-readme-streak-stats.herokuapp.com?user=debarun23&theme=transparent&hide_border=true"/>
 
 </div>
 
 ---
 
-## 🎓 Certifications
-
-`DeepLearning.AI` LangChain for LLM Application Development  
-`DeepLearning.AI` Finetuning Large Language Models  
-`Hugging Face` NLP Course  
-`Meta` Version Control · `Deloitte` Technology Job Simulation · `IBM` Getting Started with AI
-
----
-
-## 📬 Contact
-
-[![Email](https://img.shields.io/badge/Email-0078D4?style=flat-square&logo=microsoft-outlook&logoColor=white)](mailto:debarundas237@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/debarun-das-14b3a4259)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/debarun23)
-[![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=flat-square&logo=vercel&logoColor=white)](https://debarun-s-portfolio.vercel.app/)
-[![HuggingFace](https://img.shields.io/badge/HuggingFace-FFD21E?style=flat-square&logo=huggingface&logoColor=black)](https://huggingface.co/Debarun12)
-
----
-
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=80&section=footer&animation=twinkling" />
-  
-  <sub>Building intelligence from first principles · Not <code>from_pretrained()</code></sub>
+
+Building intelligence from first principles.
+
+LLM Engineering · Fine-Tuning · RAG · Agentic AI
+
+Kolkata, India
+
 </div>
