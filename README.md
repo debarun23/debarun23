@@ -96,6 +96,7 @@ Status         :  Complete — deployed on HuggingFace
 - PyTorch 2.6 changed `weights_only=True` default, breaking checkpoint resume with UnpicklingError. Fix: remove `rng_state.pth` before resuming.
 
 Model: [huggingface.co/Debarun12/JavaExpert-Qwen2.5-3B](https://huggingface.co/Debarun12/JavaExpert-Qwen2.5-3B)
+Code: [github.com/debarun23/JavaExpert-Qwen2.5-3B](https://github.com/debarun23/JavaExpert-Qwen2.5-3B)
 
 ---
 
@@ -128,27 +129,22 @@ Analyzes any public GitHub repository in real time. 100% parsing accuracy via Gi
 
 ---
 
-**Crypto Price Tracker Dashboard**
-
-Real-time tracking for 50+ cryptocurrencies. CoinGecko API with React Hooks and Google Charts. 40% faster load times post-Vite migration.
-
-`React` `Google Charts` `CoinGecko API` `Vite`
-[github.com/debarun23/Crypto-Price-Tracking-App](https://github.com/debarun23/Crypto-Price-Tracking-App)
-
----
-
 ## Technical Stack
 
 **AI / ML**
 
 [![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)](https://pytorch.org)
 [![HuggingFace](https://img.shields.io/badge/HuggingFace-FFD21E?style=flat-square&logo=huggingface&logoColor=black)](https://huggingface.co)
+[![PEFT](https://img.shields.io/badge/PEFT-FF6F00?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/docs/peft)
+[![TRL](https://img.shields.io/badge/TRL-7B2FBE?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/docs/trl)
 [![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white)](https://langchain.com)
 [![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org)
 [![CUDA](https://img.shields.io/badge/CUDA-76B900?style=flat-square&logo=nvidia&logoColor=white)](https://developer.nvidia.com/cuda-zone)
 [![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)](https://numpy.org)
 
 Implemented from scratch: `Transformer` · `Multi-Head Attention` · `RoPE` · `SwiGLU` · `LoRA` · `QLoRA` · `Flash Attention` · `Cosine LR Scheduling` · `Gradient Accumulation`
+
+Fine-tuning frameworks used: `PEFT` · `TRL` · `SFTTrainer` · `Adafactor` · `bitsandbytes`
 
 **Infrastructure**
 
@@ -162,10 +158,9 @@ Implemented from scratch: `Transformer` · `Multi-Head Attention` · `RoPE` · `
 
 | Issuer | Certification |
 |:--|:--|
-| Hugging Face | The LLM Course — Fundamentals
-| Deloitte | Australia Technology Job Simulation |
-| Meta | Version Control |
+| Hugging Face | The LLM Course — Fundamentals |
 | IBM | Getting Started with Artificial Intelligence |
+| Deloitte | Australia Technology Job Simulation |
 
 ---
 
