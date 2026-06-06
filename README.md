@@ -162,9 +162,7 @@ Implemented from scratch: `Transformer` · `Multi-Head Attention` · `RoPE` · `
 
 | Issuer | Certification |
 |:--|:--|
-| DeepLearning.AI | LangChain for LLM Application Development |
-| DeepLearning.AI | Finetuning Large Language Models |
-| Hugging Face | NLP Course |
+| Hugging Face | The LLM Course — Fundamentals
 | Deloitte | Australia Technology Job Simulation |
 | Meta | Version Control |
 | IBM | Getting Started with Artificial Intelligence |
