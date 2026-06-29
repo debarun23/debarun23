@@ -6,7 +6,6 @@ AI Engineer at Mind & Matter UK. I specialize in the full LLM pipeline — archi
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-debarun--das-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/debarun-das)
 [![HuggingFace](https://img.shields.io/badge/HuggingFace-Debarun12-FFD21E?style=flat-square&logo=huggingface&logoColor=black)](https://huggingface.co/Debarun12)
-[![Portfolio](https://img.shields.io/badge/Portfolio-Live-000000?style=flat-square&logo=vercel&logoColor=white)](https://debarun-s-portfolio.vercel.app/)
 [![Email](https://img.shields.io/badge/Gmail-debarundas237-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:debarundas237@gmail.com)
 
 ---
