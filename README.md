@@ -174,4 +174,4 @@ Fine-tuning frameworks used: `PEFT` · `TRL` · `SFTTrainer` · `Adafactor` · `
 
 *Building intelligence from first principles · Not `from_pretrained()`*
 
-*Open to AI / ML Engineering roles · Kolkata, India · Remote-friendly*
+
