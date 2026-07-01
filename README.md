@@ -25,7 +25,8 @@ class DebarunDas:
 
 ---
 
-## Project 1 — ENG_llmV03
+## Project 1 — ScratchLLM-95
+
 
 95M parameter transformer language model built entirely from scratch in PyTorch. No pretrained weights. No `from_pretrained()`.
 
