@@ -1,4 +1,4 @@
-# Debarun Das — AI Engineer
+# Debarun Das — Software Engineeer
 
 **Building intelligent systems from first principles.**
 
@@ -14,7 +14,7 @@ AI Engineer at Mind & Matter UK. I specialize in the full LLM pipeline — archi
 
 ```python
 class DebarunDas:
-    role       = "AI Engineer @ Mind & Matter UK"
+    role       = "Software Engineer(AI/ML focused) @ Mind & Matter UK"
     location   = "Kolkata, India"
     focus      = ["LLM Architecture", "LoRA / QLoRA Fine-Tuning", "RAG Systems"]
     flagship   = "Built 95M-param LLM from scratch — beats GPT-3 Small (PPL 24.40 vs 26.0)"
