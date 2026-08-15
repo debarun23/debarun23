@@ -35,42 +35,48 @@ This isn't a list of libraries I've imported once. Everything below, I've implem
 
 ---
 
-## Project 1 — ScratchLLM-95
+## Project 1 — TinyTalk-124M
 
-A 95M-parameter transformer language model built entirely from scratch in PyTorch. No pretrained weights. No `from_pretrained()`.
+A conversational language model built through a complete first-principles pipeline: a 95M-parameter transformer pretrained from scratch, then adapted into a chat model via two independent, staged LoRA fine-tuning passes. No pretrained weights used at any stage.
 
 ```
-Architecture   :  RoPE + SwiGLU Transformer  (same design family as LLaMA / Mistral / Gemma)
-Parameters     :  95M
-Training Data  :  WikiText-103  (103M tokens)
-Base PPL       :  24.40  —  beats GPT-3 Small (26.0) with 30% fewer parameters
-Fine-tuned PPL :  20.83  (two-stage LoRA: R128 → merged → R64)
-LoRA Params    :  ~1.6M trainable  (1.8% of base)
-QA Dataset     :  355k clean pairs  (SciQ + ELI5 + FreebaseQA, cleaned from 405k raw)
-Hardware       :  Single RTX 5050  —  8.5 GB VRAM
+Base Model     :  ScratchLM-95M (88.7M measured params) — RoPE + SwiGLU transformer, 12 layers
+Pretraining    :  WikiText-103, converged epoch 17, validation PPL 24.40 (beats GPT-3 Small's 26.0)
+Stage A        :  Instruction adaptation — LoRA r=32, alpha=64, target: qkv_proj + out_proj
+Stage B        :  Conversational refinement — independent LoRA adapter on the re-merged Stage A base
+Trainable      :  1,179,648 params (1.02% of 115.57M) per stage
+Final Val PPL  :  25.83 (monotonic decrease, plateaus epoch 4)
+Hardware       :  Single RTX 5050 — 8.5 GB VRAM, mixed precision (AMP)
 Status         :  Complete — deployed on HuggingFace
 ```
 
-**What makes this different from a tutorial clone:**
+**What makes this different from a single-pass fine-tune:**
 
-- Rebuilt the architecture from V2 to V3 after diagnosing validation contamination that spiked perplexity from 43 to 73
-- Implemented RoPE, SwiGLU, Flash Attention, and LoRA from mathematical foundations
-- Hit catastrophic forgetting on a full fine-tune (perplexity rose from 24 to 35+), root-caused it, and switched to a two-stage LoRA pipeline instead
-- Engineered 355k clean QA pairs from 405k raw records: regex deduplication, filler-phrase filtering, length enforcement
-- Every epoch tracked. Every bug documented. Every architectural decision justified, not guessed at.
+- Two-stage architecture instead of one fine-tuning pass: Stage A adapts the frozen backbone to the instruction/response format, Stage B loads that re-merged checkpoint as a new frozen base and trains an independently zero-initialized adapter for multi-turn conversation, keeping each stage's learning signal scoped to the capability it targets
+- Every merge step verified against a live forward pass: 148 total keys merged, 0 missing, 0 unexpected, both for Stage A and Stage B
+- Label-shift sanity check run before training to confirm next-token targets are correctly offset by exactly one position (`labels[0][:9] == input_ids[0][1:10]`) — the kind of silent bug that otherwise trains a model on the wrong task entirely
+- `lora_B` zero-initialized so the adapted model is numerically identical to the frozen base before any gradient step, `lora_A` uses small-scale noise (or `kaiming_uniform_` in the Stage A refinement) so the first backward pass still has a well-conditioned gradient
+- Full training curve logged step-by-step, not just a final number: perplexity tracked from 41.06 at step 1400 down to 25.83 by step 10600
 
-**V2 to V3 architecture upgrade:**
+**Real training curve (logged):**
 
-| | V2 | V3 |
-|:--|:--:|:--:|
-| Position Encoding | Absolute | RoPE |
-| FFN Activation | GELU | SwiGLU |
-| Transformer Layers | 8 | 12 |
-| Parameters | 77M | 95M |
-| Final PPL | ~28 | 20.83 |
+| Step | Epoch | Train Loss | Val Loss | Val PPL |
+|:--|:--:|:--:|:--:|:--:|
+| 1400 | 0 | 3.59 | 3.72 | 41.06 |
+| 3400 | 1 | 3.82 | 3.47 | 32.23 |
+| 5600 | 2 | 3.26 | 3.34 | 28.16 |
+| 7600 | 3 | 2.95 | 3.27 | 26.44 |
+| 9800 | 4 | 3.52 | 3.25 | 25.82 |
+| 10600 | 4 | 3.68 | 3.25 | 25.83 |
 
-Model: [huggingface.co/Debarun12/ENG-llmV03](https://huggingface.co/Debarun12/ENG-llmV03)
-Code: [github.com/debarun23/LLM-from-scratch](https://github.com/debarun23/LLM-from-scratch)
+**Real, unedited model output** (greedy decoding, repetition penalty 1.3):
+
+> **Prompt:** How can I improve my relationship with my family?
+> **Response:** One way to improve your relationships with your family is by developing a strong bond. This will help you build trust and loyalty, which in turn helps you feel more connected to them.
+
+Model: [huggingface.co/Debarun12/tinytalk-124m](https://huggingface.co/Debarun12/tinytalk-124m)
+Code: [github.com/debarun23/tinytalk-114m](https://github.com/debarun23/tinytalk-114m)
+Base model: [github.com/debarun23/LLM-from-scratch](https://github.com/debarun23/LLM-from-scratch)
 
 ---
 
